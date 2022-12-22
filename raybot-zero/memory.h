@@ -4,21 +4,21 @@
 
 namespace memory
 {
-    inline void __wp_off()
-    {
-        auto cr0 = __readcr0();
-        cr0 &= 0xfffffffffffeffff;
-        __writecr0(cr0);
-        _disable();
-    }
+	inline void __wp_off()
+	{
+		auto cr0 = __readcr0();
+		cr0 &= 0xfffffffffffeffff;
+		__writecr0(cr0);
+		_disable();
+	}
 
-    inline void __wp_on()
-    {
-        auto cr0 = __readcr0();
-        cr0 |= 0x10000;
-        _enable();
-        __writecr0(cr0);
-    }
+	inline void __wp_on()
+	{
+		auto cr0 = __readcr0();
+		cr0 |= 0x10000;
+		_enable();
+		__writecr0(cr0);
+	}
 
 	template <typename T>
 	inline auto _read(u32 address) -> T
