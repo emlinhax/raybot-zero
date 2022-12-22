@@ -4,38 +4,6 @@ using System.Runtime.InteropServices;
 using System.Threading;
 
 
-/// <summary>
-/// <para>
-/// Sources: 
-/// <para>https://stackoverflow.com/questions/358700/how-to-install-a-windows-service-programmatically-in-c </para>
-/// <para>https://www.c-sharpcorner.com/article/create-windows-services-in-c-sharp/</para>
-/// </para>
-/// 
-/// <para>
-/// Installs and starts the service
-/// ServiceInstaller.InstallAndStart("MyServiceName", "MyServiceDisplayName", "C:\\PathToServiceFile.exe");
-/// </para>
-/// <para>
-/// Removes the service
-/// ServiceInstaller.Uninstall("MyServiceName");
-/// </para>
-/// <para>
-/// Checks the status of the service
-/// ServiceInstaller.GetServiceStatus("MyServiceName");
-/// </para>
-/// <para>
-/// Starts the service
-/// ServiceInstaller.StartService("MyServiceName");
-/// </para>
-/// <para>
-/// Stops the service
-/// ServiceInstaller.StopService("MyServiceName");
-/// </para>
-/// <para>
-/// Check if service is installed
-/// ServiceInstaller.ServiceIsInstalled("MyServiceName");
-/// </para>
-/// </summary>
 public static class ServiceInstaller
 {
     private const int STANDARD_RIGHTS_REQUIRED = 0xF0000;
