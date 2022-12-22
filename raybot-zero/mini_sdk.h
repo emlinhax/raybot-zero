@@ -27,12 +27,12 @@ public:
 
 	void write_force_attack(i32 v)
 	{
-		memory::write<i32>(reinterpret_cast<u32>(this) + g_Offsets::dwForceAttack, v);
+		memory::write<i32>(base() + g_Offsets::dwForceAttack, v);
 	}
 
 	i32 read_force_attack()
 	{
-		return memory::read<i32>(reinterpret_cast<u32>(this) + g_Offsets::dwForceAttack);
+		return memory::read<i32>(base() + g_Offsets::dwForceAttack);
 	}
 };
 
@@ -47,7 +47,7 @@ public:
 
 	i32 health()
 	{
-		return memory::read<i32>((reinterpret_cast<u32>(this) + g_Offsets::m_iHealth));
+		return memory::read<i32>((base() + g_Offsets::m_iHealth));
 	}
 
 	b8 is_alive()
@@ -57,16 +57,16 @@ public:
 
 	i32 is_dormant()
 	{
-		return memory::read<i32>((reinterpret_cast<u32>(this) + g_Offsets::m_bDormant));
+		return memory::read<i32>((base() + g_Offsets::m_bDormant));
 	}
 
 	i32 crosshair_id()
 	{
-		return memory::read<i32>((reinterpret_cast<u32>(this) + g_Offsets::m_iCrosshairId));
+		return memory::read<i32>((base() + g_Offsets::m_iCrosshairId));
 	}
 
 	i32 team_id()
 	{
-		return memory::read<i32>((reinterpret_cast<u32>(this) + g_Offsets::m_iTeamNum));
+		return memory::read<i32>((base() + g_Offsets::m_iTeamNum));
 	}
 };
