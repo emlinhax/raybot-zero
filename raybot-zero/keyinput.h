@@ -1,5 +1,6 @@
 #pragma once
 
+//thanks to yazzn https://www.unknowncheats.me/forum/c-and-c-/327461-kernel-mode-key-input.html
 namespace g_Input {
 
     PEPROCESS csrssProc;
