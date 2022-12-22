@@ -3,6 +3,10 @@
 #include <ntifs.h>
 #include <ntddk.h>
 
+//one might notice that I did not use my custom types here 
+//which *may* lead to the conclusion that some of this code is pasted.
+//tho i cant give credits since i just smashed it all together
+
 namespace utils
 {
     inline void kernel_sleep(int ms)
