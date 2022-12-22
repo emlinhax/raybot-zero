@@ -30,8 +30,10 @@ namespace _
 	static client_t* pClient;
 }
 
-//for itzpax: a cycle means a loop in the main thread. 
-//g_Cycle just contains info about the current cycle like localPlayer etc
+//for anyone wondering: a cycle means a loop in the main thread. 
+//g_Cycle just contains info about the current "mainthread-while-loop-tick" (ex: localPlayer etc).
+//could also be referred to as a tick but i thought it might get confused
+//with the actual ingame tick
 namespace g_Cycle
 {
 	static entity_t* localPlayer;
