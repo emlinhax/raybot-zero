@@ -1,0 +1,4 @@
+For the future me!
+
+Add these two launch parameters:
+-force_device_id 0x2e42 -force_vendor_id 0x8086

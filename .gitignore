@@ -1,0 +1,12 @@
+
+*.vsidx
+*.ipch
+*.db
+*.lock
+.vs/raybot-zero/v17/.suo
+*.tlog
+*.log
+*.pdb
+*.cache
+*.recipe
+*.obj

@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32505.426
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "raybot-zero", "raybot-zero\raybot-zero.vcxproj", "{3386F618-A986-4738-B677-7D3669154D54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "raybot-zero-loader", "raybot-zero-loader\raybot-zero-loader.csproj", "{83419A10-ECF9-4330-98E8-A294ED6AFD57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|Any CPU.Build.0 = Debug|x64
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|ARM.ActiveCfg = Debug|ARM
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|ARM.Build.0 = Debug|ARM
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|ARM64.Build.0 = Debug|ARM64
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|x64.ActiveCfg = Debug|x64
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|x64.Build.0 = Debug|x64
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|x86.ActiveCfg = Debug|Win32
+		{3386F618-A986-4738-B677-7D3669154D54}.Debug|x86.Build.0 = Debug|Win32
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|Any CPU.ActiveCfg = Release|x64
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|Any CPU.Build.0 = Release|x64
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|ARM.ActiveCfg = Release|ARM
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|ARM.Build.0 = Release|ARM
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|ARM64.ActiveCfg = Release|ARM64
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|ARM64.Build.0 = Release|ARM64
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|x64.ActiveCfg = Release|x64
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|x64.Build.0 = Release|x64
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|x86.ActiveCfg = Release|Win32
+		{3386F618-A986-4738-B677-7D3669154D54}.Release|x86.Build.0 = Release|Win32
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|ARM.Build.0 = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|x64.Build.0 = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Debug|x86.Build.0 = Debug|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|ARM.ActiveCfg = Release|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|ARM.Build.0 = Release|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|ARM64.Build.0 = Release|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|x64.ActiveCfg = Release|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|x64.Build.0 = Release|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|x86.ActiveCfg = Release|Any CPU
+		{83419A10-ECF9-4330-98E8-A294ED6AFD57}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E16B3FD5-576B-4482-9E04-84384E9F5FB4}
+	EndGlobalSection
+EndGlobal

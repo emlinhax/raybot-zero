@@ -1,0 +1,77 @@
+;
+; CS-Driver.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System ; TODO: specify appropriate Class
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=CS-Driver.cat
+DriverVer= ; TODO: set DriverVer in stampinf property pages
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+CS-Driver_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+CS-Driver.sys  = 1,,
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1 ; make sure the number matches with SourceDisksNames
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+%CS-Driver.DeviceDesc%=CS-Driver_Device, Root\CS-Driver ; TODO: edit hw-id
+
+[CS-Driver_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+CS-Driver.sys
+
+;-------------- Service installation
+[CS-Driver_Device.NT.Services]
+AddService = CS-Driver,%SPSVCINST_ASSOCSERVICE%, CS-Driver_Service_Inst
+
+; -------------- CS-Driver driver install sections
+[CS-Driver_Service_Inst]
+DisplayName    = %CS-Driver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\CS-Driver.sys
+
+;
+;--- CS-Driver_Device Coinstaller installation ------
+;
+
+[CS-Driver_Device.NT.CoInstallers]
+AddReg=CS-Driver_Device_CoInstaller_AddReg
+CopyFiles=CS-Driver_Device_CoInstaller_CopyFiles
+
+[CS-Driver_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+
+[CS-Driver_Device_CoInstaller_CopyFiles]
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+
+[CS-Driver_Device.NT.Wdf]
+KmdfService =  CS-Driver, CS-Driver_wdfsect
+[CS-Driver_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "CS-Driver Installation Disk"
+CS-Driver.DeviceDesc = "CS-Driver Device"
+CS-Driver.SVCDESC = "CS-Driver Service"
