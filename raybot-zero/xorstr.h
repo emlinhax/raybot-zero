@@ -4,12 +4,6 @@
 
 Original Author: skadro
 Github: https://github.com/skadro-official
-License: See end of file
-
-skCrypter
-		Compile-time, Usermode + Kernelmode, safe and lightweight string crypter library for C++11+
-
-							*Not removing this part is appreciated*
 ____________________________________________________________________________________________________________*/
 
 #ifdef _KERNEL_MODE
