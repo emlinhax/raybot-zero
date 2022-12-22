@@ -14,15 +14,8 @@ namespace cheat
 			if (cId < 64 && cId > 0)
 			{
 				entity_t* player = reinterpret_cast<entity_t*>(memory::read<u32>(_::pClient->base() + g_Offsets::dwEntityList + ((cId - 1) * 0x10)));
-				if (player->health() > 0)
-				{
-					if (player->team_id() != local->team_id())
-					{
-						if (_::pClient->read_force_attack() == 4)
-						{
-							_::pClient->write_force_attack(6);
-						}
-					}
+				if ((player->health() > 0) && (player->team_id() != local->team_id()) && _::pClient->read_force_attack() == 4) {
+					_::pClient->write_force_attack(6);
 				}
 			}
 		}
@@ -55,21 +48,17 @@ namespace cheat
 				if (player == NULL)
 					continue;
 				
-				if (player->health() > 0 && !player->is_dormant())
+				if ((player->health() > 0 && !player->is_dormant()) && player->team_id() != local->team_id()) 
 				{
-					if (player->team_id() != local->team_id())
-					{
-						u32 iGlowIndex = memory::read<u32>(player->base() + g_Offsets::m_iGlowIndex);
+					u32 iGlowIndex = memory::read<u32>(player->base() + g_Offsets::m_iGlowIndex);
 
-						//set player glowing
-						memory::write<float>(pGlowObj + (iGlowIndex * 0x38) + 0x8, 1.0f);
-						memory::write<float>(pGlowObj + (iGlowIndex * 0x38) + 0xC, 0.f);
-						memory::write<float>(pGlowObj + (iGlowIndex * 0x38) + 0x10, 0.f);
-						memory::write<float>(pGlowObj + (iGlowIndex * 0x38) + 0x14, 1.0f);
-						
-						memory::write<u32>(pGlowObj + (iGlowIndex * 0x38) + 0x28, 1);
-						memory::write<u32>(pGlowObj + (iGlowIndex * 0x38) + 0x29, 0);
-					}
+					memory::write<float>(pGlowObj + (iGlowIndex * 0x38) + 0x8, 1.0f);
+					memory::write<float>(pGlowObj + (iGlowIndex * 0x38) + 0xC, 0.f);
+					memory::write<float>(pGlowObj + (iGlowIndex * 0x38) + 0x10, 0.f);
+					memory::write<float>(pGlowObj + (iGlowIndex * 0x38) + 0x14, 1.0f);
+
+					memory::write<u32>(pGlowObj + (iGlowIndex * 0x38) + 0x28, 1);
+					memory::write<u32>(pGlowObj + (iGlowIndex * 0x38) + 0x29, 0);
 				}
 			}
 		}
